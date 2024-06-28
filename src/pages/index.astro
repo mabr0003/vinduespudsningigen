@@ -53,17 +53,18 @@
           </div>
         </div>
       </div>
-      <div id="companies">
-        <h4>Arias samarbejdspartnere</h4>
-        <ul>
-          <li><i class="fa-brands fa-twitter"></i></li>
-          <li><i class="fa-brands fa-discord"></i></li>
-          <li><i class="fa-brands fa-dropbox"></i></li>
-          <li><i class="fa-brands fa-squarespace"></i></li>
-          <li><i class="fa-brands fa-android"></i></li>
-          <li><i class="fa-brands fa-paypal"></i></li>
-          <li><i class="fa-brands fa-youtube"></i></li>
-        </ul>
+      <div id="companies" class="breakout_container">
+        <article class="testimonials">
+          <div class="testimony">
+            <p>"Fantastisk udvendig rengøring! Bilen ser helt ny ud efter behandlingen."</p>
+          </div>
+          <div class="testimony">
+            <p>"Rat og dashboard rengøringen gjorde en stor forskel! Det føles som om jeg kører i en helt ny bil."</p>
+          </div>
+          <div class="testimony">
+            <p>"Interiørplejen var en game changer! Kabine lugter frisk og føles som om den er blevet løftet."</p>
+          </div>
+        </article>
       </div>
       <div id="principles" class="breakout_container grid_1-1-1 hide">
         <div>
@@ -162,4 +163,18 @@
     </footer>
     <script src="/src/js/menu.js"></script>
   </body>
+
+  <style>
+    .testimonials {
+      display: flex;
+      text-align: center;
+      padding: 3rem;
+      background-color: var(--secondary-bg);
+    }
+    .testimonials img {
+      width: 30px;
+      align-self: center;
+      margin-top: 1rem;
+    }
+  </style>
 </html>

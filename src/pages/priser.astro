@@ -41,5 +41,138 @@
         </div>
       </nav>
     </header>
+
+    <main>
+      <h1>Vinduespudsning Udregner</h1>
+      <div class="window-types">
+        <div class="window-type" data-price="500">
+          <img src="window1.jpg" alt="Window 1" />
+          <div class="input-container">
+            <button class="decrease">-</button>
+            <input type="number" class="window-count" value="0" min="0" />
+            <button class="increase">+</button>
+          </div>
+        </div>
+        <div class="window-type" data-price="750">
+          <img src="window2.jpg" alt="Window 2" />
+          <div class="input-container">
+            <button class="decrease">-</button>
+            <input type="number" class="window-count" value="0" min="0" />
+            <button class="increase">+</button>
+          </div>
+        </div>
+        <div class="window-type" data-price="1000">
+          <img src="window3.jpg" alt="Window 3" />
+          <div class="input-container">
+            <button class="decrease">-</button>
+            <input type="number" class="window-count" value="0" min="0" />
+            <button class="increase">+</button>
+          </div>
+        </div>
+      </div>
+      <button id="calculate-button">Calculate Total Price</button>
+      <div id="total-price">Total Pris: 0 kr</div>
+    </main>
   </body>
+
+  <script>
+    document.querySelectorAll(".increase").forEach(function (button) {
+      button.addEventListener("click", function () {
+        const input = this.previousElementSibling;
+        input.value = parseInt(input.value) + 1;
+      });
+    });
+
+    document.querySelectorAll(".decrease").forEach(function (button) {
+      button.addEventListener("click", function () {
+        const input = this.nextElementSibling;
+        input.value = Math.max(0, parseInt(input.value) - 1);
+      });
+    });
+
+    document.getElementById("calculate-button").addEventListener("click", function () {
+      let totalPrice = 0;
+      document.querySelectorAll(".window-type").forEach(function (windowType) {
+        const pricePerWindow = parseInt(windowType.getAttribute("data-price"));
+        const count = parseInt(windowType.querySelector(".window-count").value);
+        totalPrice += pricePerWindow * count;
+      });
+      const totalPriceElement = document.getElementById("total-price");
+      totalPriceElement.textContent = `Total Pris: ${totalPrice} kr`;
+      totalPriceElement.style.display = "block"; // Show the total price
+    });
+  </script>
 </html>
+
+<style>
+  .window-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .window-type {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+  }
+
+  .window-type img {
+    width: 100%;
+    height: auto;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .input-container button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .window-count {
+    width: 50px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+    -moz-appearance: textfield;
+  }
+
+  .window-count::-webkit-outer-spin-button,
+  .window-count::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  #calculate-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #total-price {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    display: none;
+    text-align: center;
+  }
+
+  .decrease,
+  .increase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+  }
+</style>
