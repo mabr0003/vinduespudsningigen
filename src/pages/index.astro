@@ -2,15 +2,164 @@
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinduespudsning</title>
+    <link rel="icon" href="svg/ariaicon.svg" />
+    <link rel="stylesheet" href="/src/css/reset.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/layout.css" />
+    <link rel="stylesheet" href="/src/css/colors.css" />
+    <link rel="stylesheet" href="/src/css/menu.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/vik1lxa.css" />
+    <script src="https://kit.fontawesome.com/67f49ad00c.js" crossorigin="anonymous"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Varela&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" id="logo"> </a>
+        <ul class="desktop_nav">
+          <li><a href="/">Forside</a></li>
+          <li>
+            <a href="/priser">Priser</a>
+          </li>
+          <li><a href="/om">Om os</a></li>
+
+          <li><a href="contact.html" class="btn btn_nav"> Kontakt </a></li>
+        </ul>
+        <div id="mobile_nav">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="hero" class="breakout_container">
+        <div>
+          <h2>Skab harmoni — skab <span>succes!</span></h2>
+          <p class="hide">Aria er din destination for stemme- og sangtræning, specialiseret i kurser for kor, organisationer og erhvervslivet.</p>
+          <div>
+            <a href="contact.html" class="btn btn_cta">Kontakt</a>
+            <a href="about.html" class="btn btn_ghost">Læs mere</a>
+          </div>
+        </div>
+      </div>
+      <div id="companies">
+        <h4>Arias samarbejdspartnere</h4>
+        <ul>
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-discord"></i></li>
+          <li><i class="fa-brands fa-dropbox"></i></li>
+          <li><i class="fa-brands fa-squarespace"></i></li>
+          <li><i class="fa-brands fa-android"></i></li>
+          <li><i class="fa-brands fa-paypal"></i></li>
+          <li><i class="fa-brands fa-youtube"></i></li>
+        </ul>
+      </div>
+      <div id="principles" class="breakout_container grid_1-1-1 hide">
+        <div>
+          <img src="svg/mundsvg2.svg" alt="" />
+          <h3>Stemmen</h3>
+          <p>Stemmecoaching forbedrer præstationen ved at skærpe stemmekontrol og udtryk. Dette styrker kommunikationsevner og indflydelse.</p>
+        </div>
+        <div>
+          <img src=" svg/airsvg2.svg" alt="" />
+          <h3>Vejrtrækningen</h3>
+          <p>Opnå bevidst vejrtrækning for øget energi, bedre stresshåndtering og mental klarhed. Åndedræt giver dybere forståelse af krop og sind.</p>
+        </div>
+        <div>
+          <img src="svg/standsvg.svg" alt="" />
+          <h3>Holdningen</h3>
+          <p>Transformer din holdning ved at udfordre dig selv og fremme positiv mentalitet. Resultatet er øget selvtillid, selvbevidsthed og modstandsdygtighed.</p>
+        </div>
+      </div>
+      <div class="product_card card_pink grid_1-2">
+        <a href="products_org.html">
+          <img src="dummy_imgs/COLOURBOX59214101.webp" alt="dummy" />
+        </a>
+        <div>
+          <a href="products_org.html">
+            <p class="tagline">Stemmer, Lederskab og Harmoni</p>
+            <h3>Organisationer og virksomheder</h3>
+            <p>Aria tilbyder specialdesignede kurser og workshops til organisationer, virksomheder og foreninger, der ønsker at styrke deres kommunikationsfærdigheder. Skab en stærkere stemme med Aria.</p>
+          </a>
+          <a href="products_org.html" class="btn">Lær mere <i class="fa-solid fa-chevron-right"></i> </a>
+        </div>
+      </div>
+      <div class="product_card card_blue grid_2-1">
+        <a href="products_org.html" class="order">
+          <img src="webp/privat_arrangement.webp" alt="dummy" />
+        </a>
+        <div>
+          <a href="products_org.html">
+            <p class="tagline">Intime stemmerejser</p>
+            <h3>Privatarrangementer</h3>
+            <p>Oplev en fælles tilgang til harmonisering af stemme og krop hos Aria. Vi integrerer terapeutisk vejledning baseret på VoiceEmbodiments og Alexanderteknikken for en dybdegående og transformativ oplevelse.</p>
+          </a>
+          <a href="products_org.html" class="btn">Lær mere <i class="fa-solid fa-chevron-right"></i> </a>
+        </div>
+      </div>
+      <div class="product_card card_pink grid_1-2">
+        <a href="products_org.html"> <img src="dummy_imgs/COLOURBOX38789395.webp" alt="dummy" /></a>
+        <div>
+          <a href="products_org.html">
+            <p class="tagline">Skab din unikke lyd</p>
+            <h3>Soloundervisning</h3>
+            <p>Tag dine sangevner til det næste niveau med privat sangundervisning hos Aria. Jon Hollesen guider dig gennem teknikker og metoder til at optimere din performance.</p>
+          </a>
+          <a href="products_org.html" class="btn">Lær mere <i class="fa-solid fa-chevron-right"></i> </a>
+        </div>
+      </div>
+      <div id="owner" class="grid_1-1">
+        <img src="webp/meetjon.webp" alt="dummy" class="order" />
+        <div>
+          <h2>Jon Hollesen har arbejdet med stemmecoaching i 25 år</h2>
+          <p>Jon Hollesen, ejer og coach hos Aria, er en erfaren musikvidenskabsmand og sangpædagog. Med en passion for stemmen og stor erfaring i workshops for internationale firmaer, deler Jon sin ekspertise og kærlighed til sang i hver lektion.</p>
+          <a href="about.html" class="btn btn_owner"> Læs mere </a>
+        </div>
+        <div class="info_box">
+          <p>Jon Hollesen er stemmeeksperten, der guider dig gennem hver undervisningssession med kærlighed og passion.</p>
+        </div>
+      </div>
+      <div id="mobile_contact">
+        <h1>Kontakt os</h1>
+        <p>Har du spørgsmål? Lad os sammen udforske mulighederne for at forbedre dine stemme- og talefærdigheder.</p>
+        <a href="contact.html" class="btn btn_nav">Kontakt</a>
+      </div>
+    </main>
+    <footer>
+      <div id="footer_logo"></div>
+      <div>
+        <ul class="footer_nav">
+          <li><a href="products_org.html">Organisationer</a></li>
+          <li><a href="products_org.html">Privatarrangementer</a></li>
+          <li><a href="products_org.html">Soloundervisning</a></li>
+          <li><a href="products_org.html">Netkor</a></li>
+        </ul>
+        <ul class="socials">
+          <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <ul class="order">
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Terms of Service</a></li>
+          <li><a href="">Cookies Settings</a></li>
+        </ul>
+        <p>© 2023 Aria. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="/src/js/menu.js"></script>
+  </body>
 </html>

@@ -1,0 +1,8 @@
+:root {
+  --main-text: hsl(0, 0%, 27%);
+  --sub-color: #d9d9d9;
+  --main-bg: #005185;
+  --accent-color: #e5978a;
+  --secondary-bg: #77b6ea;
+  --tertiary-bg: #f2e1cf;
+}
